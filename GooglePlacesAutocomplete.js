@@ -178,7 +178,7 @@ export default class GooglePlacesAutocomplete extends Component {
   getCurrentLocation = () => {
     let options = {
       enableHighAccuracy: false,
-      timeout: 20000,
+      timeout: 30000,
       maximumAge: 1000
     };
 
@@ -189,8 +189,9 @@ export default class GooglePlacesAutocomplete extends Component {
       }
     }
     
-      Geolocation.getCurrentPosition(
+        Geolocation.getCurrentPosition(
           position => {
+            console.log(position);
              if (this.props.nearbyPlacesAPI === 'None') {
                 let currentLocation = {
                   description: this.props.currentLocationLabel,
