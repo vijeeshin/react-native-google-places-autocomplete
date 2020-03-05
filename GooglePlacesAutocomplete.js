@@ -191,7 +191,22 @@ export default class GooglePlacesAutocomplete extends Component {
     
       Geolocation.getCurrentPosition(
           position => {
-            this._requestNearby(position.coords.latitude, position.coords.longitude);
+             if (this.props.nearbyPlacesAPI === 'None') {
+                let currentLocation = {
+                  description: this.props.currentLocationLabel,
+                  geometry: {
+                    location: {
+                      lat: position.coords.latitude,
+                      lng: position.coords.longitude
+                    }
+                  }
+                };
+
+                this._disableRowLoaders();
+                this.props.onPress(currentLocation, currentLocation);
+            } else {
+              this._requestNearby(position.coords.latitude, position.coords.longitude);
+            }
           },
       (error) => {
         this._disableRowLoaders();
