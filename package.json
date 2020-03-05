@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FaridSafi/react-native-google-places-autocomplete.git"
+    "url": "git+https://github.com/vijeeshin/react-native-google-places-autocomplete.git"
   },
   "keywords": [
     "autocomplete",
@@ -22,14 +22,13 @@
     "android"
   ],
   "bugs": {
-    "url": "https://github.com/FaridSafi/react-native-google-places-autocomplete/issues"
+    "url": "https://github.com/vijeeshin/react-native-google-places-autocomplete/issues"
   },
-  "homepage": "https://github.com/FaridSafi/react-native-google-places-autocomplete#readme",
+  "homepage": "https://github.com/vijeeshin/react-native-google-places-autocomplete#readme",
   "dependencies": {
     "lodash.debounce": "^4.0.8",
     "prop-types": "^15.5.10",
     "qs": "^5.2.0",
-    "@react-native-community/geolocation": "^2.0.2",
   },
   "devDependencies": {
     "eslint": "^1.9.0",
